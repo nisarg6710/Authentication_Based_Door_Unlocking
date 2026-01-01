@@ -63,6 +63,7 @@ void loop() {
         uartTo8051.print(currentValue); 
         
         delay(100); 
+        
         if(Firebase.RTDB.setString(&fbdo, "/Password/Status", "Idle")){
             Serial.println("Status reset to Idle");
             lastValue = "Idle"; 
